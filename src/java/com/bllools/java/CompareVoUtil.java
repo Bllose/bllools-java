@@ -17,6 +17,14 @@ public class CompareVoUtil {
         String originType;
     }
 
+    /**
+     * 如果存在两个比较近似的vo， 希望可以抽取相同部分抽象化。
+     * 如果域比较多，通过该方法可以快速比较两对象域的差异
+     * 
+     * @param originVo 比对基准对象
+     * @param targetVo 进行比较的vo对象
+     * @return
+     */
     public static List<compareResult> compare(Object originVo, Object targetVo){
         List<compareResult> resultList = new ArrayList<>();
         Field[] originFields = originVo.getClass().getDeclaredFields();
