@@ -68,9 +68,6 @@ public class CompareVoUtil {
         int amount = originFields.length;
         for(Field tarField: targetFields){
             String fieldName = tarField.getName();
-            if(fieldName.equals("applyNo")){
-                System.out.println("~!!");
-            }
             String fieldType = tarField.getType().getTypeName();
             boolean same = false;
 
